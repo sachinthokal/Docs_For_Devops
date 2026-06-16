@@ -1,14 +1,23 @@
 site_name: DevOpsVaultX Docs
-site_url: https://devopsvaultx.com/docs/
+site_url: https://docs.devopsvaultx.com/
 
 theme:
   name: material
+  custom_dir: overrides
+  features:
+    - navigation.sections
   palette:
     scheme: default
     primary: indigo
     accent: indigo
 
+# Setup custom styling and overrides
+extra_css:
+  - stylesheets/extra.css
+
+# Professional footer setup without default generator link
+copyright: |
+  &copy; 2026 <strong>DevOpsVaultX</strong> | <span style="color: #10b981;">Code. Deploy. Automate. Repeat.</span> ❤️
+
 nav:
   - Home: index.md
-  - CI/CD: cicd.md
-  - Docker & K8s: docker.md

@@ -1,0 +1,15 @@
+/* Layout Width Override */
+:root {
+  --md-max-width: 95%; 
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-grid {
+    max-width: 95%;
+  }
+}
+
+/* Ensure the custom copyright block uses the full container and centers correctly */
+.md-footer-meta__inner {
+  justify-content: center !important;
+}
