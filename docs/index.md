@@ -1,14 +1,12 @@
-# DevOpsVaultX Documentation
+# DevOps Documentation Hub
 
-Welcome to the central repository for DevOps knowledge, cloud infrastructure guides, and automation blueprints.
+Welcome to **DevOpsVaultX Engineering Wiki**, the ultimate central repository built for DevOps users to go from **Zero to Hero**. Whether you are starting from the absolute basics or architecting enterprise production environments, you will find every detail, command checklist, and advanced blueprint required here.
 
 ---
 
 ## 🌐 Integrated Ecosystem
 
->
-**About the Platform:** This documentation hub is an extension of [DevOpsVaultX Main Site](https://devopsvaultx.com/).
-Our main platform is an open-source, beautifully designed hub of tools and utilities built specifically for developers and DevOps engineers. Because all tools run directly in your browser, your data remains secure, and the execution is completely serverless and instant.
+> **About the Platform:** This documentation hub is an extension of [DevOpsVaultX Main Site](https://devopsvaultx.com/). Our main platform is an open-source, beautifully designed hub of tools and utilities built specifically for developers and DevOps engineers. Because all tools run directly in your browser, your data remains secure, and the execution is completely serverless and instant.
 
 ---
 
@@ -18,9 +16,14 @@ Navigate through our structured documentation categories to speed up your daily 
 
 | Track | Focus Areas | Quick Access |
 | :--- | :--- | :--- |
-| **🚀 CI/CD Automation** | Pipeline setups, GitHub Actions, Jenkins shared libraries. | [Go to CI/CD](cicd.md) |
-| **🐳 Containerization** | Dockerfile optimization, multi-stage builds, registry setups. | [Go to Docker](docker.md) |
-| **☸️ Orchestration** | Kubernetes manifests, architecture, and cluster administration. | [Go to K8s](docker.md) |
+| **💻 OS Fundamentals** | Linux & Windows internals, system architectures, and system administration scripts. | [Explore OS](os-fundamentals/index.md) |
+| **🔀 Version Control** | Source code management architectures, structured Git rules, and GitHub workflows. | [Explore Git](version-control/index.md) |
+| **🐳 Containerization** | Dockerfile runtime optimization, layered builds isolation, and multi-container configs. | [Explore Docker](containerization/index.md) |
+| **☁️ Cloud Platforms** | AWS and Azure network topographies, multi-tenant compute, and global policies setup. | [Explore Cloud](cloud/index.md) |
+| **🏗️ IaC & Configuration** | Declarative infrastructure with Terraform states and automated systems setup via Ansible. | [Explore IaC](iac-config-management/index.md) |
+| **🚀 CI/CD Automation** | Deployment pipelines execution blocks, GitHub Actions runners, and Jenkins files. | [Explore CI/CD](ci-cd/index.md) |
+| **☸️ Orchestration** | Kubernetes cluster provisioning configs, ingress tracking controls, and pods management. | [Explore K8s](orchestration/index.md) |
+| **📈 Monitoring & Logging** | Prometheus telemetry pipelines, promQL scrapers, and operational Grafana panels. | [Explore SRE](monitoring-logging/index.md) |
 
 ---
 
