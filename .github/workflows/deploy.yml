@@ -2,6 +2,9 @@ name: CI/CD - Deploy DevOpsVaultX Docs
 
 on:
  workflow_dispatch: # Allows manual triggering of the workflow from the GitHub Actions tab
+ push:
+    tags:
+      - 'v*'
 
 permissions:
   contents: write  # Required for pushing the built HTML to the gh-pages branch

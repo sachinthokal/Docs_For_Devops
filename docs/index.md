@@ -1,4 +1,4 @@
-# 🚀 DevOpsVaultX Documentation
+# DevOpsVaultX Documentation
 
 Welcome to the central repository for DevOps knowledge, cloud infrastructure guides, and automation blueprints.
 
