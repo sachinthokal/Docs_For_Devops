@@ -1,0 +1,62 @@
+name: CI/CD - Deploy DevOpsVaultX Docs
+
+on:
+ workflow_dispatch: # Allows manual triggering of the workflow from the GitHub Actions tab
+
+permissions:
+  contents: write  # Required for pushing the built HTML to the gh-pages branch
+
+jobs:
+  deploy:
+    name: DEPLOY DOCS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Cache Pip Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install MKDocs & Material Theme
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+
+      - name: Deploy to GitHub Pages
+        run: |
+          # Dynamically picks the name of the user who triggered the pipeline
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          mkdocs gh-deploy --force
+
+      - name: Generate Deployment Summary Report
+        if: success()
+        run: |
+            echo "## 🚀 Deployment Summary Report" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "DevOps Documentation has been successfully built and pushed to production." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 🌐 Live Environments" >> $GITHUB_STEP_SUMMARY
+            echo "| Target Domain | Resource Type | Status |" >> $GITHUB_STEP_SUMMARY
+            echo "| :--- | :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+            echo "| 🖥️ [docs.devopsvaultx.com](https://docs.devopsvaultx.com/) | Custom Subdomain | 🟢 Active |" >> $GITHUB_STEP_SUMMARY
+            echo "| 📦 [GitHub Pages Deployment](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/) | Origin Host | 🟢 Synced |" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### ⚙️ Build Metadata" >> $GITHUB_STEP_SUMMARY
+            echo "*   **Triggered By:** \`${{ github.actor }}\` via code push." >> $GITHUB_STEP_SUMMARY
+            echo "*   **Commit Message:** \`${{ github.event.head_commit.message }}\`" >> $GITHUB_STEP_SUMMARY
+            echo "*   **Branch Tracking:** \`refs/heads/main\` ➔ \`gh-pages\`" >> $GITHUB_STEP_SUMMARY
+            echo "*   **Pipeline Engine:** GitHub Hosted Runner (\`ubuntu-latest\`)" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "---" >> $GITHUB_STEP_SUMMARY
+            echo "<p align='center'>Managed Automatically by DevOpsVaultX Engine. Code. Deploy. Automate. Repeat. ❤️</p>" >> $GITHUB_STEP_SUMMARY
