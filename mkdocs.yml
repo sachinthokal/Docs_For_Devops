@@ -1,0 +1,14 @@
+site_name: DevOpsVaultX Docs
+site_url: https://devopsvaultx.com/docs/
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+
+nav:
+  - Home: index.md
+  - CI/CD: cicd.md
+  - Docker & K8s: docker.md
