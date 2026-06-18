@@ -6,6 +6,10 @@ This document describes the high-level Docker architecture and container structu
 
 Briefly describe how the containers interact with each other and the host system.
 
+## Architecture
+
+![alt text](Docker_converted.webp)
+
 ## Container Diagram
 
 *(Optional: Insert a diagram or ASCII art here)*
