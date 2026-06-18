@@ -1,0 +1,1074 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.devopsvaultx.com/linux/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="architecture/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Linux - DevOpsVaultX Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DevOpsVaultX Docs" class="md-header__button md-logo" aria-label="DevOpsVaultX Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DevOpsVaultX Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DevOpsVaultX Docs" class="md-nav__button md-logo" aria-label="DevOpsVaultX Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DevOpsVaultX Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../docker/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docker
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#phase-1-the-absolute-basics-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1: The Absolute Basics (Foundations)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1: The Absolute Basics (Foundations)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-essential-navigation-file-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Essential Navigation &amp; File Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-viewing-and-editing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Viewing and Editing Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-2-user-management-permissions-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2: User Management &amp; Permissions (Security)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2: User Management &amp; Permissions (Security)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. File Permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-user-sudo-administration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. User &amp; Sudo Administration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-3-text-processing-package-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3: Text Processing &amp; Package Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3: Text Processing &amp; Package Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-searching-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Searching &amp; Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-package-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Package Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-4-networking-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4: Networking &amp; Troubleshooting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 4: Networking &amp; Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-network-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Network Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-5-process-management-system-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5: Process Management &amp; System Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 5: Process Management &amp; System Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-managing-running-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Managing Running Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-resource-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Resource Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-6-automation-with-shell-scripting-the-devops-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6: Automation with Shell Scripting (The DevOps Core)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 6: Automation with Shell Scripting (The DevOps Core)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-scripting-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Scripting Fundamentals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cron-jobs-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cron Jobs (Scheduling)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phase-7-advanced-linux-for-devops-bridge-to-cloudcontainers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 7: Advanced Linux for DevOps (Bridge to Cloud/Containers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 7: Advanced Linux for DevOps (Bridge to Cloud/Containers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ssh-secure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. SSH (Secure Shell)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-linux-namespaces-cgroups-docker-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Linux Namespaces &amp; Cgroups (Docker Foundations)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-practice-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Practice Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="linux">Linux</h1>
+<p>This roadmap is designed to take you from a Linux beginner to a professional who can confidently manage servers, automate tasks, and deploy applications in a DevOps environment.</p>
+<hr />
+<h2 id="phase-1-the-absolute-basics-foundations">Phase 1: The Absolute Basics (Foundations)</h2>
+<p>Before jumping into automation, you need to feel comfortable moving around the command line.</p>
+<h3 id="1-essential-navigation-file-management">1. Essential Navigation &amp; File Management</h3>
+<ul>
+<li><strong>Concepts:</strong> Understanding the Linux Directory Structure (Everything is a file, <code>/etc</code>, <code>/var</code>, <code>/opt</code>, <code>/home</code>).</li>
+<li><strong>Commands to Master:</strong></li>
+<li><code>pwd</code> (Print working directory)</li>
+<li><code>ls -la</code> (List files with details and hidden files)</li>
+<li><code>cd</code> (Change directory)</li>
+<li><code>mkdir -p</code> (Create nested directories)</li>
+<li><code>touch</code>, <code>cp</code>, <code>mv</code>, <code>rm -rf</code> (Create, copy, move, and forcefully delete files/folders)</li>
+</ul>
+<h3 id="2-viewing-and-editing-files">2. Viewing and Editing Files</h3>
+<ul>
+<li><strong>Concepts:</strong> Quick viewing vs. interactive editing.</li>
+<li><strong>Commands to Master:</strong></li>
+<li><code>cat</code>, <code>less</code>, <code>head</code>, <code>tail -f</code> (Crucial for monitoring live log files)</li>
+<li><strong>Vim or Nano:</strong> Learn at least one terminal-based text editor. (Know how to open, edit, save, and quit in Vim).</li>
+</ul>
+<hr />
+<h2 id="phase-2-user-management-permissions-security">Phase 2: User Management &amp; Permissions (Security)</h2>
+<p>In DevOps, you must ensure applications and users have only the minimum required access (Principle of Least Privilege).</p>
+<h3 id="1-file-permissions">1. File Permissions</h3>
+<ul>
+<li><strong>Concepts:</strong> Read ($r=4$), Write ($w=2$), Execute ($x=1$) for User, Group, and Others.</li>
+<li><strong>Commands to Master:</strong></li>
+<li><code>chmod</code> (Change file permissions, e.g., <code>chmod 755 script.sh</code>)</li>
+<li><code>chown</code> (Change file owner and group)</li>
+</ul>
+<h3 id="2-user-sudo-administration">2. User &amp; Sudo Administration</h3>
+<ul>
+<li><strong>Concepts:</strong> Root user vs. standard user, giving temporary admin rights.</li>
+<li><strong>Commands to Master:</strong></li>
+<li><code>useradd</code>, <code>usermod</code>, <code>userdel</code></li>
+<li><code>passwd</code> (Change password)</li>
+<li><code>sudo</code> (Execute command as root)</li>
+<li>Understanding the <code>/etc/passwd</code> and <code>/etc/sudoers</code> files.</li>
+</ul>
+<hr />
+<h2 id="phase-3-text-processing-package-management">Phase 3: Text Processing &amp; Package Management</h2>
+<p>DevOps engineers deal with massive configuration files and logs. You need to know how to filter data quickly.</p>
+<h3 id="1-searching-filtering">1. Searching &amp; Filtering</h3>
+<ul>
+<li><strong>Commands to Master:</strong></li>
+<li><code>grep</code> / <code>egrep</code> (Search for text patterns inside files)</li>
+<li><code>find</code> (Locate files based on name, size, or time)</li>
+<li><code>awk</code> &amp; <code>sed</code> (Basic stream editing and data extraction)</li>
+<li><strong>Pipes (<code>|</code>) and Redirections (<code>&gt;</code>, <code>&gt;&gt;</code>):</strong> Passing the output of one command as input to another.</li>
+</ul>
+<h3 id="2-package-management">2. Package Management</h3>
+<ul>
+<li><strong>Concepts:</strong> Installing, updating, and removing software dependencies.</li>
+<li><strong>Tools to Master:</strong></li>
+<li><strong>Ubuntu/Debian:</strong> <code>apt update</code>, <code>apt install</code>, <code>apt remove</code></li>
+<li><strong>CentOS/RHEL:</strong> <code>yum</code> or <code>dnf</code> equivalents</li>
+</ul>
+<hr />
+<h2 id="phase-4-networking-troubleshooting">Phase 4: Networking &amp; Troubleshooting</h2>
+<p>Applications talk to each other over networks. When a deployment fails, you need to find out why.</p>
+<h3 id="1-network-inspection">1. Network Inspection</h3>
+<ul>
+<li><strong>Concepts:</strong> IP addresses, ports, DNS, and firewalls.</li>
+<li><strong>Commands to Master:</strong></li>
+<li><code>ping</code> (Check connectivity)</li>
+<li><code>curl -v</code> / <code>wget</code> (Test API endpoints and download files)</li>
+<li><code>netstat -tulnp</code> or <code>ss -tulnp</code> (Check which applications are listening on which ports)</li>
+<li><code>nslookup</code> / <code>dig</code> (Troubleshoot DNS issues)</li>
+<li><code>ip a</code> or <code>ifconfig</code> (Check system network interfaces)</li>
+</ul>
+<hr />
+<h2 id="phase-5-process-management-system-performance">Phase 5: Process Management &amp; System Performance</h2>
+<p>How to monitor applications running on your server and deal with resource overloads.</p>
+<h3 id="1-managing-running-services">1. Managing Running Services</h3>
+<ul>
+<li><strong>Concepts:</strong> Systemd init system.</li>
+<li><strong>Commands to Master:</strong></li>
+<li><code>systemctl start | stop | restart | status &lt;service&gt;</code></li>
+<li><code>systemctl enable | disable &lt;service&gt;</code> (Ensure service starts on boot)</li>
+</ul>
+<h3 id="2-resource-monitoring">2. Resource Monitoring</h3>
+<ul>
+<li><strong>Commands to Master:</strong></li>
+<li><code>top</code> / <code>htop</code> (Live CPU and memory usage)</li>
+<li><code>ps aux | grep &lt;process_name&gt;</code> (Find process IDs)</li>
+<li><code>kill -9 &lt;PID&gt;</code> (Force stop a hanging process)</li>
+<li><code>df -h</code> (Check available disk space)</li>
+<li><code>free -m</code> (Check RAM usage)</li>
+</ul>
+<hr />
+<h2 id="phase-6-automation-with-shell-scripting-the-devops-core">Phase 6: Automation with Shell Scripting (The DevOps Core)</h2>
+<p>Stop doing things manually. If you do it more than twice, automate it.</p>
+<h3 id="1-scripting-fundamentals">1. Scripting Fundamentals</h3>
+<ul>
+<li><strong>Topics to Learn:</strong></li>
+<li>Writing your first <code>#!/bin/bash</code> script.</li>
+<li>Variables and Environment Variables (<code>export ENV="production"</code>).</li>
+<li>Positional arguments (<code>$1</code>, <code>$2</code>).</li>
+<li>Conditional statements (<code>if/else</code>) and Loops (<code>for</code>, <code>while</code>).</li>
+<li>Exit codes (<code>exit 0</code> vs <code>exit 1</code>).</li>
+</ul>
+<h3 id="2-cron-jobs-scheduling">2. Cron Jobs (Scheduling)</h3>
+<ul>
+<li><strong>Concepts:</strong> Automating backups, log rotations, or cleanups at specific times.</li>
+<li><strong>Commands to Master:</strong></li>
+<li><code>crontab -e</code> (Edit cron jobs)</li>
+<li>Understanding the crontab syntax: <code>* * * * * /path/to/script.sh</code></li>
+</ul>
+<hr />
+<h2 id="phase-7-advanced-linux-for-devops-bridge-to-cloudcontainers">Phase 7: Advanced Linux for DevOps (Bridge to Cloud/Containers)</h2>
+<p>Once you know the OS, learn how it powers modern infrastructure.</p>
+<h3 id="1-ssh-secure-shell">1. SSH (Secure Shell)</h3>
+<ul>
+<li><strong>Concepts:</strong> Passwordless login, managing remote servers safely.</li>
+<li><strong>Skills to Master:</strong></li>
+<li>Generating keys: <code>ssh-keygen</code></li>
+<li>Copying keys to server: <code>ssh-copy-id user@remote_ip</code></li>
+<li>Configuring <code>~/.ssh/config</code> for easy access.</li>
+</ul>
+<h3 id="2-linux-namespaces-cgroups-docker-foundations">2. Linux Namespaces &amp; Cgroups (Docker Foundations)</h3>
+<ul>
+<li><strong>Concepts:</strong> Docker isn't magic; it uses native Linux features.</li>
+<li><em>Namespaces:</em> Isolate process views (Network, Mount, PID).</li>
+<li><em>Cgroups (Control Groups):</em> Limit resource usage (CPU, Memory).</li>
+</ul>
+<hr />
+<h2 id="recommended-practice-project">Recommended Practice Project</h2>
+<p>To lock in your knowledge, set up a local Linux VM (using VirtualBox or AWS EC2 free tier) and do this:</p>
+<ol>
+<li>Deploy an <strong>Nginx Web Server</strong>.</li>
+<li>Change its default configuration port to <code>8080</code>.</li>
+<li>Write a Bash script that checks if Nginx is running; if it is down, the script should automatically restart it.</li>
+<li>Schedule this script to run every 5 minutes using a <strong>Cron Job</strong>.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright" style="text-align: center; width: 100%; font-family: sans-serif; font-size: 0.65rem; letter-spacing: 0.5px;">
+  <!-- Muted Silver/Gray for copyright -->
+  <span style="color: #94a3b8;">&copy; 2026</span> 
+  
+  <!-- Crisp White for Brand Name -->
+  <strong style="color: #ffffff; margin-left: 4px;">DevOpsVaultX</strong> 
+  
+  <!-- Muted Divider -->
+  <span style="color: #475569; margin: 0 8px;">|</span> 
+  
+  <!-- 🌈 Premium Smooth Gradient for Tagline -->
+  <span style="
+    background: linear-gradient(90deg, #2dd4bf 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    display: inline-block;
+  ">Code. Deploy. Automate. Repeat.</span>
+  
+  <!-- Pulsing Red Heart -->
+  <span style="color: #f43f5e; margin-left: 2px;">❤️</span>
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes", "search.suggest", "search.highlight", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
