@@ -1,15 +1,62 @@
-/* Layout Width Override */
-:root {
-  --md-max-width: 95%; 
-}
-
+/* Screen size 1220px (76.25em) */
 @media screen and (min-width: 76.25em) {
+  :root {
+    --md-breakpoint-desktop: 95%; 
+  }
+
   .md-grid {
-    max-width: 95%;
+    max-width: 95% !important; /* Left-Right space*/
+  }
+
+  .md-main__inner {
+    max-width: 100% !important;
   }
 }
 
-/* Ensure the custom copyright block uses the full container and centers correctly */
-.md-footer-meta__inner {
-  justify-content: center !important;
+/* Screen size 1600px (100em) (Ultra-wide screens) */
+@media screen and (min-width: 100em) {
+  .md-grid {
+    max-width: 98% !important;
+  }
+}
+
+/* For headings (H1) */
+h1 {
+  color: black !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+}
+
+/* H2 heading */
+h2 {
+  color: #ff230a !important;
+  font-weight: bold !important;
+}
+
+/* H3 heading */
+h3 {
+  color: #9071ee !important; /* Premium Purple Color */
+  font-weight: bold !important;
+}
+
+/* H4 heading */
+h4 {
+  color: orangered !important; /* Premium Purple Color */
+  font-weight: bold !important;
+}
+
+/* --- ONLY BOLD MAIN H1 POINTS IN TOC --- */
+
+.md-sidebar--secondary > .md-nav > .md-nav__list > .md-nav__item > .md-nav__link {
+    font-weight: bolder !important;
+    color: #111111 !important; /* Perfect Dark Dark Color */
+}
+
+.md-sidebar--secondary .md-nav__list .md-nav__list .md-nav__link {
+    font-weight: normal !important;
+    color: #555555 !important;
+}
+
+.md-sidebar--secondary .md-nav__link--active {
+    font-weight: bold !important;
 }

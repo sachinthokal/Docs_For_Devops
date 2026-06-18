@@ -8,13 +8,13 @@ theme:
     - navigation.indexes
     - search.suggest
     - search.highlight
-    - navigation.expand.sections
+    - toc.follow
 
   palette:
     scheme: default
     primary: indigo
     accent: indigo
-
+    
 # Setup explicit search plugin configuration
 plugins:
   - search
@@ -29,126 +29,14 @@ copyright: |
 
 nav:
   - Home: index.md
+  - Linux: 
+    - linux/index.md
+    - Architecture: linux/architecture.md
+    - Installation: linux/installation.md
+    - Commands: linux/commands.md
 
-  # PHASE 1: THE FOUNDATION
-  - OS Fundamentals:
-      - Overview: os-fundamentals/index.md
-      - Architecture: os-fundamentals/architecture.md
-      - Linux:
-          - Overview: linux/index.md
-          - Linux Architecture: linux/architecture.md
-          - Linux Resources: linux/resources.md
-          - Linux Cheat Sheet: linux/cheat-sheet.md
-      - Windows:
-          - Overview: windows/index.md
-          - Windows Architecture: windows/architecture.md
-          - Windows Resources: windows/resources.md
-          - Windows Cheat Sheet: windows/cheat-sheet.md
-      - Resources: os-fundamentals/resources.md
-      - Cheat Sheet: os-fundamentals/cheat-sheet.md
-   
-  - Version Control:
-      - Overview: version-control/index.md
-      - Architecture: version-control/architecture.md
-      - Git:
-          - Overview: git/index.md
-          - Git Architecture: git/architecture.md
-          - Git Resources: git/resources.md
-          - Git Cheat Sheet: git/cheat-sheet.md
-      - GitHub:
-          - Overview: github/index.md
-          - GitHub Architecture: github/architecture.md
-          - GitHub Resources: github/resources.md
-          - GitHub Cheat Sheet: github/cheat-sheet.md
-      - Resources: version-control/resources.md
-      - Cheat Sheet: version-control/cheat-sheet.md
-
-  # PHASE 2: PACKAGING & TARGET ENVIRONMENTS
-  - Containerization:
-      - Overview: containerization/index.md
-      - Architecture: containerization/architecture.md
-      - Docker:
-          - Overview: docker/index.md
-          - Docker Architecture: docker/architecture.md
-          - Docker Resources: docker/resources.md
-          - Docker Cheat Sheet: docker/cheat-sheet.md
-      - Resources: containerization/resources.md
-      - Cheat Sheet: containerization/cheat-sheet.md
-
-  - Cloud Platforms:
-      - Overview: cloud/index.md
-      - Architecture: cloud/architecture.md
-      - Azure:
-          - Overview: azure/index.md
-          - Azure Architecture: azure/architecture.md
-          - Azure Resources: azure/resources.md
-          - Azure Cheat Sheet: azure/cheat-sheet.md
-      - AWS:
-          - Overview: aws/index.md
-          - AWS Architecture: aws/architecture.md
-          - AWS Resources: aws/resources.md
-          - AWS Cheat Sheet: aws/cheat-sheet.md
-      - Resources: cloud/resources.md
-      - Cheat Sheet: cloud/cheat-sheet.md
-
-  # PHASE 3: INFRASTRUCTURE AS CODE & CONFIGURATION
-  - IaC & Configuration Management:
-      - Overview: iac-config-management/index.md
-      - Architecture: iac-config-management/architecture.md
-      - Terraform:
-          - Overview: terraform/index.md
-          - Terraform Architecture: terraform/architecture.md
-          - Terraform Resources: terraform/resources.md
-          - Terraform Cheat Sheet: terraform/cheat-sheet.md
-      - Ansible:
-          - Overview: ansible/index.md
-          - Ansible Architecture: ansible/architecture.md
-          - Ansible Resources: ansible/resources.md
-          - Ansible Cheat Sheet: ansible/cheat-sheet.md
-      - Resources: iac-config-management/resources.md
-      - Cheat Sheet: iac-config-management/cheat-sheet.md
-
-  # PHASE 4: AUTOMATION & SCALABILITY
-  - CI/CD Pipelines:
-      - Overview: ci-cd/index.md
-      - Architecture: ci-cd/architecture.md
-      - GitHub Actions:
-          - Overview: github-actions/index.md
-          - GitHub Actions Architecture: github-actions/architecture.md
-          - GitHub Actions Resources: github-actions/resources.md
-          - GitHub Actions Cheat Sheet: github-actions/cheat-sheet.md
-      - Jenkins:
-          - Overview: jenkins/index.md
-          - Jenkins Architecture: jenkins/architecture.md
-          - Jenkins Resources: jenkins/resources.md
-          - Jenkins Cheat Sheet: jenkins/cheat-sheet.md
-      - Resources: ci-cd/resources.md
-      - Cheat Sheet: ci-cd/cheat-sheet.md
-
-  - Cluster Orchestration:
-      - Overview: orchestration/index.md
-      - Architecture: orchestration/architecture.md
-      - Kubernetes:
-          - Overview: kubernetes/index.md
-          - Kubernetes Architecture: kubernetes/architecture.md
-          - Kubernetes Resources: kubernetes/resources.md
-          - Kubernetes Cheat Sheet: kubernetes/cheat-sheet.md
-      - Resources: orchestration/resources.md
-      - Cheat Sheet: orchestration/cheat-sheet.md
-
-  # PHASE 5: OBSERVABILITY & SRE OPERATIONS
-  - Monitoring & Logging:
-      - Overview: monitoring-logging/index.md
-      - Architecture: monitoring-logging/architecture.md
-      - Prometheus:
-          - Overview: prometheus/index.md
-          - Prometheus Architecture: prometheus/architecture.md
-          - Prometheus Resources: prometheus/resources.md
-          - Prometheus Cheat Sheet: prometheus/cheat-sheet.md
-      - Grafana:
-          - Overview: grafana/index.md
-          - Grafana Architecture: grafana/architecture.md
-          - Grafana Resources: grafana/resources.md
-          - Grafana Cheat Sheet: grafana/cheat-sheet.md
-      - Resources: monitoring-logging/resources.md
-      - Cheat Sheet: monitoring-logging/cheat-sheet.md
+  - Docker: 
+    - docker/index.md
+    - Architecture: docker/architecture.md
+    - Installation: docker/installation.md
+    - Commands: docker/commands.md
