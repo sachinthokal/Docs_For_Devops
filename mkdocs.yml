@@ -40,3 +40,12 @@ nav:
     - Architecture: docker/architecture.md
     - Installation: docker/installation.md
     - Commands: docker/commands.md
+
+  - Kubernetes:
+    - kubernetes/index.md
+    - Architecture: kubernetes/architecture.md
+    - Installation:
+        - Kind Installation: kubernetes/kind_installation.md
+        - Minikube Installation: kubernetes/minikube_installation.md
+    - Commands: kubernetes/commands.md
+    - K8S Probes: kubernetes/probes.md
