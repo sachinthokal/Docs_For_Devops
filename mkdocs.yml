@@ -32,19 +32,19 @@ nav:
   - Linux: 
     - linux/index.md
     - Architecture: linux/architecture.md
-    - Installation: linux/installation.md
+    - Installations: linux/installation.md
     - Commands: linux/commands.md
 
   - Docker: 
     - docker/index.md
     - Architecture: docker/architecture.md
-    - Installation: docker/installation.md
+    - Installations: docker/installation.md
     - Commands: docker/commands.md
 
   - Kubernetes:
     - kubernetes/index.md
     - Architecture: kubernetes/architecture.md
-    - Installation:
+    - Installations:
         - Kind Installation: kubernetes/kind_installation.md
         - Minikube Installation: kubernetes/minikube_installation.md
     - Commands: kubernetes/commands.md
