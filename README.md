@@ -20,6 +20,96 @@ Every guide and utility under the **DevOpsVaultX** umbrella is built keeping the
 
 ---
 
+# MkDocs – First Project
+
+## 1. Install MkDocs
+
+```bash
+pip install mkdocs
+```
+
+Check installation:
+
+```bash
+mkdocs --version
+```
+
+## 2. Create Your First Project
+
+```bash
+mkdocs new my-project
+```
+
+Go inside the project:
+
+```bash
+cd my-project
+```
+
+Project structure:
+
+```text
+my-project/
+├── docs/
+│   └── index.md
+└── mkdocs.yml
+```
+
+## 3. Start MkDocs Server
+
+```bash
+mkdocs serve
+```
+
+Open in browser:
+
+```text
+http://127.0.0.1:8000
+```
+
+## 4. Edit Documentation
+
+Edit:
+
+```bash
+docs/index.md
+```
+
+Example:
+
+```md
+# My First Documentation
+
+Welcome to my first MkDocs project!
+```
+
+Save the file and refresh the browser. MkDocs automatically reloads the changes.
+
+## 5. Build the Project
+
+```bash
+mkdocs build
+```
+
+The static website will be generated in:
+
+```text
+site/
+```
+
+## Quick Start
+
+```bash
+pip install mkdocs
+mkdocs new my-project
+cd my-project
+mkdocs serve
+```
+
+Open **[http://127.0.0.1:8000](http://127.0.0.1:8000)** 🚀
+
+---
+
 ## 🤝 Community & Contributions
 
 Found a typo or want to add a production-tested DevOps blueprint?
