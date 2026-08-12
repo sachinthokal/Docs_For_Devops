@@ -16,7 +16,7 @@ Navigate through our structured documentation categories to speed up your daily 
 
 | Track | Focus Areas | Quick Access |
 | :--- | :--- | :--- |
-| **💻 OS Fundamentals** | Linux & Windows internals, system architectures, and system administration scripts. | [Explore OS](os-fundamentals/index.md) |
+| **💻 OS Fundamentals** | Linux & Windows internals, system architectures, and system administration scripts. | [Explore OS](linux/index.md) |
 | **🔀 Version Control** | Source code management architectures, structured Git rules, and GitHub workflows. | [Explore Git](version-control/index.md) |
 | **🐳 Containerization** | Dockerfile runtime optimization, layered builds isolation, and multi-container configs. | [Explore Docker](containerization/index.md) |
 | **☁️ Cloud Platforms** | AWS and Azure network topographies, multi-tenant compute, and global policies setup. | [Explore Cloud](cloud/index.md) |

@@ -35,11 +35,41 @@ nav:
     - Installations: linux/installation.md
     - Commands: linux/commands.md
 
+  - Git: 
+    - git/index.md
+    - Architecture: git/architecture.md
+    - Installations: git/installation.md
+    - Commands: git/commands.md
+
+  - GitHub: 
+    - github/index.md
+    - Architecture: github/architecture.md
+    - Installations: github/installation.md
+    - Commands: github/commands.md
+
   - Docker: 
     - docker/index.md
     - Architecture: docker/architecture.md
     - Installations: docker/installation.md
     - Commands: docker/commands.md
+
+  - CI/CD:
+    - cicd/index.md
+    - Architecture: cicd/architecture.md
+    - Installations: cicd/installation.md
+    - Commands: cicd/commands.md
+
+  - GitHub Actions:
+    - github_actions/index.md
+    - Architecture: github_actions/architecture.md
+    - Installations: github_actions/installation.md
+    - Commands: github_actions/commands.md
+
+  - Azure DevOps:
+    - azure_devops/index.md
+    - Architecture: azure_devops/architecture.md
+    - Installations: azure_devops/installation.md
+    - Commands: azure_devops/commands.md
 
   - Kubernetes:
     - kubernetes/index.md
@@ -50,3 +80,27 @@ nav:
     - Commands: kubernetes/commands.md
     - RBAC: kubernetes/rbac.md
     - K8S Probes: kubernetes/probes.md
+
+  - Terraform:
+    - terraform/index.md
+    - Architecture: terraform/architecture.md
+    - Installations: terraform/installation.md
+    - Commands: terraform/commands.md
+
+  - Ansible:
+    - ansible/index.md
+    - Architecture: ansible/architecture.md
+    - Installations: ansible/installation.md
+    - Commands: ansible/commands.md
+
+  - Observability:
+    - observability/index.md
+    - Architecture: observability/architecture.md
+    - Installations: observability/installation.md
+    - Commands: observability/commands.md
+
+  - DevSecOps:
+    - devsecops/index.md
+    - Architecture: devsecops/architecture.md
+    - Installations: devsecops/installation.md
+    - Commands: devsecops/commands.md
