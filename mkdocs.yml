@@ -48,4 +48,5 @@ nav:
         - Kind Installation: kubernetes/kind_installation.md
         - Minikube Installation: kubernetes/minikube_installation.md
     - Commands: kubernetes/commands.md
+    - RBAC: kubernetes/rbac.md
     - K8S Probes: kubernetes/probes.md
