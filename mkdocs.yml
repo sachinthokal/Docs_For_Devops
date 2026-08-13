@@ -4,50 +4,51 @@ site_url: https://docs.devopsvaultx.com/
 theme:
   name: material
   custom_dir: overrides
+
   features:
     - navigation.indexes
+    - navigation.top
     - search.suggest
     - search.highlight
     - toc.follow
+    - content.code.copy
 
   palette:
     scheme: default
     primary: indigo
     accent: indigo
-    
-# Setup explicit search plugin configuration
+
 plugins:
   - search
 
-# Setup custom styling and overrides
 extra_css:
   - stylesheets/extra.css
 
-# Professional footer setup without default generator link
 copyright: |
   &copy; 2026 <strong>DevOpsVaultX</strong> | <span style="color: #10b981;">Code. Deploy. Automate. Repeat.</span> ❤️
 
 nav:
   - Home: index.md
-  - Linux: 
+
+  - Linux:
     - linux/index.md
     - Architecture: linux/architecture.md
     - Installations: linux/installation.md
     - Commands: linux/commands.md
 
-  - Git: 
+  - Git:
     - git/index.md
     - Architecture: git/architecture.md
     - Installations: git/installation.md
     - Commands: git/commands.md
 
-  - GitHub: 
+  - GitHub:
     - github/index.md
     - Architecture: github/architecture.md
     - Installations: github/installation.md
     - Commands: github/commands.md
 
-  - Docker: 
+  - Docker:
     - docker/index.md
     - Architecture: docker/architecture.md
     - Installations: docker/installation.md
@@ -75,8 +76,8 @@ nav:
     - kubernetes/index.md
     - Architecture: kubernetes/architecture.md
     - Installations:
-        - Kind Installation: kubernetes/kind_installation.md
-        - Minikube Installation: kubernetes/minikube_installation.md
+        - Kind Installation: kubernetes/kind.md
+        - Minikube Installation: kubernetes/minikube.md
     - Commands: kubernetes/commands.md
     - RBAC: kubernetes/rbac.md
     - K8S Probes: kubernetes/probes.md
@@ -93,6 +94,18 @@ nav:
     - Installations: ansible/installation.md
     - Commands: ansible/commands.md
 
+  - Azure:
+    - azure/index.md
+    - Architecture: azure/architecture.md
+    - Installations: azure/installation.md
+    - Commands: azure/commands.md
+
+  - AWS:
+    - aws/index.md
+    - Architecture: aws/architecture.md
+    - Installations: aws/installation.md
+    - Commands: aws/commands.md
+
   - Observability:
     - observability/index.md
     - Architecture: observability/architecture.md
@@ -104,3 +117,32 @@ nav:
     - Architecture: devsecops/architecture.md
     - Installations: devsecops/installation.md
     - Commands: devsecops/commands.md
+
+  - GitOps:
+    - gitops/index.md
+    - Architecture: gitops/architecture.md
+    - Installations: gitops/installation.md
+    - Commands: gitops/commands.md
+
+  - Helm:
+    - helm/index.md
+    - Architecture: helm/architecture.md
+    - Installations: helm/installation.md
+    - Commands: helm/commands.md
+
+  - Interview Questions:
+    - interview_questions/index.md
+    - Linux: interview_questions/linux.md
+    - Git: interview_questions/git.md
+    - GitHub: interview_questions/github.md
+    - Docker: interview_questions/docker.md
+    - CI/CD: interview_questions/cicd.md
+    - GitHub Actions: interview_questions/github_actions.md
+    - Azure DevOps: interview_questions/azure_devops.md
+    - Kubernetes: interview_questions/kubernetes.md
+    - Terraform: interview_questions/terraform.md
+    - Ansible: interview_questions/ansible.md
+    - Azure: interview_questions/azure.md
+    - AWS: interview_questions/aws.md
+    - Observability: interview_questions/observability.md
+    - DevSecOps: interview_questions/devsecops.md

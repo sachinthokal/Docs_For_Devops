@@ -1,24 +1,87 @@
-## Essential Docker Commands
+# Docker Complete Commands Reference ⚡
 
-Docker allows you to build, run, and manage applications inside lightweight containers.
+Categorized command sheet for managing images, containers, networks, volumes, and Compose stacks.
+
+---
+
+## 1. Image Management
 
 | Command | Description | Example |
 | :--- | :--- | :--- |
-| `docker pull` | Downloads an image from Docker Hub | `docker pull nginx` |
-| `docker run` | Creates and starts a new container from an image | `docker run -d -p 80:80 --name web nginx` |
-| `docker ps` | Lists running containers (`-a` shows all containers) | `docker ps -a` |
-| `docker stop` | Safely stops one or more running containers | `docker stop web` |
-| `docker start` | Starts a previously stopped container | `docker start web` |
-| `docker exec` | Runs a command inside a running container | `docker exec -it web bash` |
-| `docker logs` | Displays the logs or output of a container | `docker logs -f web` |
-| `docker images` | Lists all downloaded Docker images on your machine | `docker images` |
-| `docker rm` | Removes a stopped container | `docker rm web` |
-| `docker rmi` | Removes an unused Docker image | `docker rmi nginx` |
-| `docker build` | Builds a Docker image from a `Dockerfile` | `docker build -t myapp:1.0 .` |
-| `docker compose up` | Starts multi-container apps defined in `docker-compose.yml` | `docker compose up -d` |
+| `docker build` | Build an image from a Dockerfile. | `docker build -t myapp:1.0 .` |
+| `docker images` | List all local images. | `docker images` |
+| `docker pull` | Pull an image from Docker Hub. | `docker pull nginx:alpine` |
+| `docker push` | Push an image to registry. | `docker push username/myapp:1.0` |
+| `docker rmi` | Remove one or more images. | `docker rmi myapp:1.0` |
 
-### Docker Tips
+---
 
-* **Detached Mode (`-d`):** Runs the container in the background, freeing up your terminal prompt.
-* **Interactive Mode (`-it`):** Connects your terminal directly to the container's interactive terminal.
-* **System Cleanup:** Run `docker system prune` to clear stopped containers, unused networks, and unreferenced images to reclaim disk space.
+## 2. Container Lifecycle Commands
+
+```bash
+# Run container in detached mode with port mapping
+docker run -d -p 8080:80 --name web-server nginx:alpine
+
+# List active containers
+docker ps
+
+# List all containers (including stopped)
+docker ps -a
+
+# Stop / Start / Restart container
+docker stop web-server
+docker start web-server
+docker restart web-server
+
+# Force remove container
+docker rm -f web-server
+
+# Inspect live container resource usage
+docker stats
+```
+
+---
+
+## 3. Debugging & Executing Inside Containers
+
+```bash
+# View live logs of a container
+docker logs -f web-server
+
+# Execute an interactive bash/sh session inside running container
+docker exec -it web-server sh
+
+# Inspect low-level details (IP, mounts, status)
+docker inspect web-server
+```
+
+---
+
+## 4. Volume & Network Management
+
+```bash
+# Volumes (Data Persistence)
+docker volume create app_data
+docker volume ls
+docker run -d -v app_data:/var/lib/mysql mysql:latest
+
+# Networks (Container Inter-communication)
+docker network create app_net
+docker network ls
+docker run -d --network app_net --name backend-api my-api:v1
+```
+
+---
+
+## 5. Docker Compose Commands
+
+```bash
+# Start multi-container stack in background
+docker compose up -d
+
+# Stop and remove containers, networks, and volumes
+docker compose down
+
+# View logs from all services in Compose stack
+docker compose logs -f
+```

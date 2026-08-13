@@ -15,7 +15,6 @@ Welcome to the Kubernetes documentation hub for this project. Use the navigation
 
 * [**Kind Cluster Setup**](installations/kind.md) – Step-by-step guide to setting up a local multi-node cluster using Kind.
 * [**Minikube Cluster Setup**](installations/minikube.md) – Local cluster setup, addons, and management with Minikube.
-* [**Kubeadm & Cloud K8s**](installations/kubeadm-cloud.md) – Production cluster bootstrap guide for Kubeadm, EKS, AKS, and GKE.
 
 ### 3. Storage & Configuration
 
@@ -24,8 +23,8 @@ Welcome to the Kubernetes documentation hub for this project. Use the navigation
 
 ### 4. Networking & Service Mesh
 
-* [**Services & Ingress**](networking/services-ingress.md) – Routing traffic using ClusterIP, NodePort, LoadBalancer, and NGINX Ingress Controllers.
-* [**CNI & Service Mesh**](networking/cni-mesh.md) – Pod networking with Calico/Cilium, NetworkPolicies, and Istio mTLS basics.
+* [**Services & Ingress**](services-ingress.md) – Routing traffic using ClusterIP, NodePort, LoadBalancer, and NGINX Ingress Controllers.
+* [**CNI & Service Mesh**](cni-mesh.md) – Pod networking with Calico/Cilium, NetworkPolicies, and Istio mTLS basics.
 
 ### 5. Application Health & Autoscaling
 
@@ -34,12 +33,12 @@ Welcome to the Kubernetes documentation hub for this project. Use the navigation
 
 ### 6. Security & Access Control (RBAC)
 
-* [**RBAC & Service Accounts**](security/rbac.md) – User and workload authentication via Roles, ClusterRoles, and RoleBindings.
-* [**Pod & Network Security**](security/pod-security.md) – Enforcing Pod Security Admission (PSA), SecurityContext, and NetworkPolicies.
+* [**RBAC & Service Accounts**](rbac.md) – User and workload authentication via Roles, ClusterRoles, and RoleBindings.
+* [**Pod & Network Security**](pod-security.md) – Enforcing Pod Security Admission (PSA), SecurityContext, and NetworkPolicies.
 
 ### 7. Package Management & GitOps
 
-* [**Helm Package Manager**](gitops/helm.md) – Building and deploying applications using Helm Charts and values files.
+* [**Helm Package Manager**](helm/helm.md) – Building and deploying applications using Helm Charts and values files.
 * [**GitOps Workflows**](gitops/argocd.md) – Declarative continuous delivery with ArgoCD and FluxCD.
 
 ### 8. Observability & Logging
