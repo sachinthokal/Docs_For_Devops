@@ -1,0 +1,390 @@
+/* =========================================
+   DEVOPSVaultX - GLOBAL LAYOUT
+   ========================================= */
+
+/* Desktop */
+@media screen and (min-width: 76.25em) {
+    :root {
+        --md-breakpoint-desktop: 95%;
+    }
+
+    .md-grid {
+        max-width: 95% !important;
+    }
+
+    .md-main__inner {
+        max-width: 100% !important;
+    }
+}
+
+/* Ultra-wide screens */
+@media screen and (min-width: 100em) {
+    .md-grid {
+        max-width: 98% !important;
+    }
+}
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1 {
+    color: black !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+
+h2 {
+    color: #ff230a !important;
+    font-weight: bold !important;
+}
+
+h3 {
+    color: #9071ee !important;
+    font-weight: bold !important;
+}
+
+h4 {
+    color: orangered !important;
+    font-weight: bold !important;
+}
+
+.md-typeset h1 {
+    padding-bottom: 10px;
+    border-bottom: 3px solid orangered;
+}
+
+
+/* =========================================
+   TABLE OF CONTENTS
+   ========================================= */
+
+/* Main TOC headings */
+.md-sidebar--secondary
+> .md-nav
+> .md-nav__list
+> .md-nav__item
+> .md-nav__link {
+    font-weight: bolder !important;
+    color: #111111 !important;
+}
+
+/* TOC child items */
+.md-sidebar--secondary
+.md-nav__list
+.md-nav__list
+.md-nav__link {
+    font-weight: normal !important;
+    color: #555555 !important;
+}
+
+/* Active TOC item */
+.md-sidebar--secondary .md-nav__link--active {
+    font-weight: bold !important;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.md-nav__link {
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Main sidebar items */
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item
+> .md-nav__link {
+    border: none !important;
+    border-left: 4px solid transparent !important;
+    border-radius: 0 6px 6px 0;
+    padding: 9px 12px;
+    margin: 2px 0;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+.md-nav--primary
+> .md-nav__list
+> .md-nav__item
+> .md-nav__link:hover {
+    background: #f3f4f6;
+    border-left-color: #9071ee !important;
+    padding-left: 16px;
+}
+
+/* Active */
+.md-nav--primary .md-nav__link--active {
+    background: #fff3ef !important;
+    color: orangered !important;
+    border-left: 4px solid orangered !important;
+    border-bottom: none !important;
+    font-weight: 900 !important;
+    padding-left: 16px;
+}
+
+/* Child menu */
+.md-nav--primary
+.md-nav__list
+.md-nav__list
+.md-nav__link {
+    border-bottom: none !important;
+    padding: 5px 10px 5px 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Child hover */
+.md-nav--primary
+.md-nav__list
+.md-nav__list
+.md-nav__link:hover {
+    color: orangered;
+    background: #fafafa;
+}
+
+
+/* =========================================
+   SIDEBAR SCROLLBAR
+   ========================================= */
+
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 5px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+/* Better reading width */
+.md-content__inner {
+    max-width: 1100px;
+    margin: auto;
+}
+
+
+/* =========================================
+   CODE BLOCKS
+   ========================================= */
+
+.md-typeset pre {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.md-typeset code {
+    border-radius: 4px;
+}
+
+
+/* =========================================
+   TABLES
+   ========================================= */
+
+.md-typeset table:not([class]) {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ADMONITIONS
+   ========================================= */
+
+.md-typeset .admonition,
+.md-typeset details {
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   DEVOPSVaultX HOMEPAGE
+   ========================================= */
+
+.dvx-hero {
+    text-align: center;
+    padding: 35px 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.dvx-hero strong {
+    color: orangered;
+}
+
+.dvx-buttons {
+    margin-top: 25px;
+}
+
+.dvx-buttons a {
+    display: inline-block;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 6px;
+    background: orangered;
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.dvx-buttons a:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.dvx-buttons a:last-child {
+    background: #eeeeee;
+    color: #333 !important;
+}
+
+
+/* =========================================
+   INFO BOX
+   ========================================= */
+
+.dvx-info {
+    padding: 18px 20px;
+    border-left: 4px solid orangered;
+    background: #fafafa;
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   KNOWLEDGE CARDS
+   ========================================= */
+
+.dvx-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 25px 0;
+}
+
+.dvx-card {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    text-decoration: none !important;
+    color: inherit !important;
+    transition: 0.2s ease;
+}
+
+.dvx-card:hover {
+    transform: translateY(-3px);
+    border-color: orangered;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.dvx-card span {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.dvx-card strong {
+    font-size: 1rem;
+}
+
+.dvx-card small {
+    margin-top: 5px;
+    color: #777;
+}
+
+
+/* =========================================
+   OPERATIONAL PRINCIPLES
+   ========================================= */
+
+.dvx-principles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.dvx-principles > div {
+    padding: 18px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+}
+
+.dvx-principles p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+
+/* =========================================
+   INTERVIEW SECTION
+   ========================================= */
+
+.dvx-interview {
+    margin-top: 20px;
+    padding: 22px;
+    border-left: 4px solid #9071ee;
+    background: #fafafa;
+    border-radius: 5px;
+}
+
+.dvx-interview a {
+    color: orangered;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+
+    .dvx-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dvx-principles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
+    .dvx-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dvx-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .dvx-hero {
+        padding: 25px 10px;
+    }
+
+    .dvx-buttons a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    .md-content__inner {
+        max-width: 100%;
+    }
+}
